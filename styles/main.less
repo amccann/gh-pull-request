@@ -1,22 +1,21 @@
-// The ui-variables file is provided by base themes provided by Atom.
-//
-// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
-// for a full listing of what's available.
 @import "ui-variables";
-
-.gh-pull-request {
-  color: @text-color;
-}
+@import "./font-awesome/variables";
+@import "./fonts";
 
 @font-size-smaller: 0.75 * @font-size;
 @font-size-smallest: 0.66 * @font-size;
-
 
 /* commentCard */
 .commentCard {
   position: relative;
   padding: 1rem;
   border: 1px solid @overlay-border-color;
+
+  .commentCard-toolbar {
+     display: flex;
+     justify-content: flex-end;
+     font-size: @font-size-smaller;
+   }
 
   .commentCard-main {
     display: flex;
@@ -29,6 +28,19 @@
       align-self: flex-start;
       margin-right: 1rem;
     }
+
+    .commentCard-content {
+      flex-grow: 1;
+
+      textarea {
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        min-height: 250px;
+        background-color: @input-background-color;
+        border-color: @input-border-color;
+      }
+    }
+
   }
 
   .commentCard-footer {
@@ -79,4 +91,32 @@
     width: 128px;
     height: 128px;
   }
+}
+
+.icon {
+  font-family: 'Font Awesome';
+
+  &.icon--pencil:after {
+    content: @fa-var-pencil;
+  }
+}
+
+.button {
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  background-color: @button-background-color;
+  border-color: @button-border-color;
+
+  &:hover {
+    background-color: @button-background-color-hover;
+  }
+
+  &:active {
+    background-color: @button-background-color-selected;
+  }
+}
+
+.u-hidden {
+  display: none;
 }
