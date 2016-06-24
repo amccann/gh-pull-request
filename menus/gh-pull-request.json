@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle gh-pull-request",
+        "command": "gh-pull-request:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "gh-pull-request",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "gh-pull-request:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

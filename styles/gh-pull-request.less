@@ -1,0 +1,82 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+
+.gh-pull-request {
+  color: @text-color;
+}
+
+@font-size-smaller: 0.75 * @font-size;
+@font-size-smallest: 0.66 * @font-size;
+
+
+/* commentCard */
+.commentCard {
+  position: relative;
+  padding: 1rem;
+  border: 1px solid @overlay-border-color;
+
+  .commentCard-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: @font-size;
+
+    .avatar {
+      &:extend(.avatar.avatar--medium);
+      align-self: flex-start;
+      margin-right: 1rem;
+    }
+  }
+
+  .commentCard-footer {
+    display: flex;
+    justify-content: flex-end;
+
+    font-style: italic;
+    font-size: @font-size-smaller;
+    color: @text-color-subtle;
+
+    * {
+      padding-right: 10px;
+    }
+  }
+
+  &.commentCard--inline {
+
+    .commentCard-main  {
+      font-size: @font-size-smaller;
+
+      .avatar {
+        &:extend(.avatar.avatar--small);
+      }
+    }
+
+    .commentCard-footer {
+      font-size: @font-size-smallest
+    }
+  }
+}
+
+/* avatar */
+.avatar {
+  border-radius: 50%;
+  display: block;
+
+  &.avatar--small {
+    width: 32px;
+    height: 32px;
+  }
+
+  &.avatar--medium {
+    width: 64px;
+    height: 64px;
+  }
+
+  &.avatar--large {
+    width: 128px;
+    height: 128px;
+  }
+}

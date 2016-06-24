@@ -1,0 +1,5 @@
+{
+  "atom-workspace": {
+    "cmd->": "gh-pull-request:toggle"
+  }
+}
