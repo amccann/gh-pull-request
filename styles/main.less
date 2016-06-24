@@ -35,7 +35,7 @@
       textarea {
         width: 100%;
         -webkit-box-sizing: border-box;
-        min-height: 250px;
+        min-height: 25rem;
         background-color: @input-background-color;
         border-color: @input-border-color;
       }
@@ -63,6 +63,13 @@
 
       .avatar {
         &:extend(.avatar.avatar--small);
+      }
+
+      .commentCard-content {
+        textarea {
+          height: 3rem;
+          min-height: 0px;
+        }
       }
     }
 
