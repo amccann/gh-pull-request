@@ -41,11 +41,7 @@
       flex-grow: 1;
 
       textarea {
-        width: 100%;
-        -webkit-box-sizing: border-box;
         min-height: 25rem;
-        background-color: @input-background-color;
-        border-color: @input-border-color;
       }
     }
 
@@ -153,6 +149,13 @@
   &:active {
     background-color: @button-background-color-selected;
   }
+}
+
+textarea {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  background-color: @input-background-color;
+  border-color: @input-border-color;
 }
 
 .u-hidden {
